@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <script src="https://unpkg.com/vue@3/dist/vue.global.js">
+         </script>
+    </head>
+
+    <body>
+
+        <div id="d1">{{msg}}</div>
+     
+    </body>
+    <script>
+        //1.定义一个Vue组件，vue组件的名字为com （类似于Java类），组件的内容为hello world
+        var com = {
+            data(){
+                return {
+                    //定义组件的数据,数据名为  msg  ， 数据值为  hello world
+                    msg:"hello world",
+                }
+            }
+        };
+        //2.创建一个Vue实例，实例的名字为app，实例的内容为com，储存到变量app中
+        var app = Vue.createApp(com);
+        //3.挂载Vue实例，挂载到id为d1的div中
+        app.mount("#d1");
+    </script>
+</html> 

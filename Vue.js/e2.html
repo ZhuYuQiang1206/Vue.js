@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+<body>
+    <div id="d1">{{message}}</div> 
+</body>
+<script>
+    var pVue = {
+        data() {  
+            return {
+                message: '你好，中国' 
+            };
+        }
+    };
+    var app = Vue.createApp(pVue);
+    app.mount("#d1");
+</script>
+</html>
