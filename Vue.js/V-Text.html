@@ -1,0 +1,34 @@
+<html>
+
+<head>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <h3>绘制一个矩形</h3>
+    <p id="p01">
+        宽: <span v-text="width"></span>
+        高: <span v-text="height"></span>
+       <span v-text="rectangleInfo"></span>
+    </p>
+</body>
+<script>
+    //1.定义一个vue组件，组件名字为com
+    var com = {
+        //定义vue组件中的数据
+        data() { 
+            return {
+                width: "30",
+                height: "20",
+                 //定义Vue组件中的数据，名字为rectangleInfo
+                 rectangleInfo:"宽：20<span style='display:inline-block;width:30px;'></span>高：30",
+            }
+        }
+    };
+    //2.创建一个vue组件的实例，存储到变量app中
+    var app = Vue.createApp(com);
+    //3.将名字为app的组件实例，挂载到id为p01的p标签上
+    app.mount("#p01");
+</script>
+
+</html>
